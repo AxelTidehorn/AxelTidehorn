@@ -5,16 +5,19 @@ main{
     width:100%;
     margin:auto;
     min-height:calc(100vh - 20em);
-    padding:2em;
-    margin-top:4em;
+    padding:1.5em;
+    margin-top:3.5em;
     margin-bottom: 5em;
 }
 .hero-wrapper{
     height:75vh;
     display:flex;
 
-    background: radial-gradient(ellipse at top, #F0C27B, transparent),
-                radial-gradient(ellipse at bottom, #8c3788, transparent);                           ;
+    /*background: radial-gradient(ellipse at top, #F0C27B, transparent),
+                  radial-gradient(ellipse at bottom, #8c3788, transparent);
+    background: radial-gradient(ellipse at top, lightgray, transparent),
+                radial-gradient(ellipse at bottom, black, transparent);*/
+
     background-size: 200% 200%;
     -webkit-animation: HeroAnimation 17s ease infinite;
     animation: HeroAnimation 17s ease infinite;
