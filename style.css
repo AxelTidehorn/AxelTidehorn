@@ -1,0 +1,12 @@
+/*
+Theme Name: AxelTidehorn 2019
+Version: 0.1
+Description: Custom Wordpress theme for my portfolio website.
+Author: Axel Tidehorn
+*/
+
+@import url("stylesheets/base.css");
+@import url("stylesheets/header.css");
+@import url("stylesheets/body.css");
+@import url("stylesheets/footer.css");
+@import url("stylesheets/grid.css");
