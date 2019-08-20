@@ -12,7 +12,7 @@ header{
     width:100%;
     color: #efefef;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     z-index: 1200;
 }
 
@@ -20,12 +20,13 @@ header{
 .header-wrapper{
     display:flex;
     justify-content: space-between;
+    align-items: center;
     max-width:100%;
-    padding: .5em;
+    padding: .6em;
 
-    -webkit-box-shadow: 0px -6px 25px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -6px 25px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px -6px 25px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 4px -1px rgba(39,39,39,.7);
+    -moz-box-shadow: 0px 2px 4px -1px rgba(39,39,39,.7);
+    box-shadow: 0px 2px 4px -1px rgba(39,39,39,.7);
 }
 
 
@@ -55,5 +56,12 @@ header{
     width: 1.7em;
 }
 .logo-wrapper > a > img{
-    margin: 0;
+
+}
+g path{
+  fill: #ffffff;
+  transition:0.25s ease-out fill;
+}
+g:hover path{
+  fill:#8c3788;
 }

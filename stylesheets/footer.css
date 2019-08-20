@@ -9,6 +9,7 @@ footer{
 }
 small{
     color: #efefef;
+    font-weight: 300;
 }
 
 .footer-wrapper{
@@ -19,10 +20,10 @@ small{
     min-height:12em;
     display:flex;
     justify-content: space-between;
+    align-items: center;
 }
 .logo-wrapper-foot{
     width: 100px;
-    align-self: flex-end;
 }
 .logo-wrapper-foot > img{
     margin: 0;
@@ -30,7 +31,7 @@ small{
 .social-wrapper{
     font-size: 22px;
     color: white;
-    align-self: flex-end;
+
 }
 .social-wrapper > a{
     color: white;
@@ -40,7 +41,7 @@ small{
     color: #8c3788;
 }
 .maker{
-    align-self: flex-end;
+
 }
 
 
