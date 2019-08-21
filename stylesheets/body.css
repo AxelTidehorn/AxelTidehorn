@@ -6,6 +6,34 @@ main{
     margin:auto;
     min-height:calc(100vh - 20em);
     padding:1.5em;
-    margin-top:4em;
+    margin-top:4.5em;
     margin-bottom: 5em;
+}
+
+.intro-wrapper{
+    overflow: hidden;
+    display: flex;
+    z-index: 1500;
+    height: 100vh;
+    width: 100%;
+    background-image: url("http://localhost/AxelTidehorn2/wordpress/wp-content/uploads/2019/08/IMG_6463.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: space-around;
+
+    transition: all ease 1s;
+}
+.intro-logo-wrapper{
+    width: 200px;
+    display: block;
+}
+.hide{
+    opacity: 0;
+    -webkit-transform: translateY(-100vh);
+    transform: translateY(-100vh);
 }

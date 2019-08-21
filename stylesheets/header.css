@@ -58,10 +58,10 @@ header{
 .logo-wrapper > a > img{
 
 }
-g path{
+svg g{
   fill: #ffffff;
-  transition:0.25s ease-out fill;
+  transition: 0.25s ease-in fill;
 }
-g:hover path{
+svg:hover g{
   fill:#8c3788;
 }

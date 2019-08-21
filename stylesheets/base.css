@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap');
 
 *{
     box-sizing: border-box;
@@ -11,6 +11,9 @@
 }
 html{
     background-color: #fff;
+}
+p{
+    font-weight: 300;
 }
 p,h2{
     margin-bottom:1em;

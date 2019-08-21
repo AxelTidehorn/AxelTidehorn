@@ -1,13 +1,19 @@
 .hero-wrapper{
-    height:calc(100vh - 3.6em);
+    height:calc(100vh - 4.4em);
     display:flex;
-    background: radial-gradient(ellipse at top, lightgray, transparent),
-                radial-gradient(ellipse at bottom, black, transparent);
-    background-size: 200% 200%;
-    -webkit-animation: HeroAnimation 17s ease infinite;
-    animation: HeroAnimation 17s ease infinite;
+background:
+linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),
+linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%);
 
-    margin: 3.6em 0 0 0;
+
+    /*background: radial-gradient(ellipse at top, lightgray, transparent),
+                radial-gradient(ellipse at bottom, black, transparent);*/
+    background-size: 200% 200%;
+
+    /*-webkit-animation: HeroAnimation 17s ease infinite;
+    animation: HeroAnimation 17s ease infinite;*/
+
+    margin: 4.4em 0 0 0;
 }
 @-webkit-keyframes HeroAnimation {
     0%{background-position:51% 0%}
@@ -42,7 +48,7 @@
 .right-wrapper > p{
     padding: 0 .5em;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 300;
     color: #efefef;
 }
 
@@ -68,11 +74,14 @@
     .left-wrapper > img{
         position: absolute;
         bottom: 0;
-        left: -255px;
-        width: 900px;
+        left: -320px;
+        width: 1100px;
     }
-
+    .right-wrapper{
+        padding: 5em 0;
+    }
     .right-wrapper > p{
-        padding: 0 2em;
+        padding: 0 5em;
+        font-weight: 300;
     }
 }
