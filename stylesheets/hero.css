@@ -42,6 +42,7 @@ linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 9
     width: 500px;
 }
 .right-wrapper{
+    position:relative;
     width: calc(100%/2);
     padding: 1em 0;
 }
