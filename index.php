@@ -59,7 +59,7 @@
     <p>
         Låt oss fånga ljuset tillsammans!
     </p>
-    <a href="hej@axeltidehorn.se">hej@axeltidehorn.se</a>
+    <a href="mailto:hej@axeltidehorn.se?subject=AT%20-%20fotografi%20" >hej@axeltidehorn.se</a>
 </div>
 <script>
 
