@@ -57,9 +57,6 @@ header{
 .logo-wrapper{
     width: 1.7em;
 }
-.logo-wrapper > a > img{
-
-}
 .svg g{
   fill: #efefef;
   transition: 0.25s ease-in fill;

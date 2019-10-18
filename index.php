@@ -60,15 +60,7 @@
 
 ?>
 
-<<<<<<< HEAD
-=======
-<div class="contact-wrapper" id="contact<">
-    <p>
-        Låt oss fånga ljuset tillsammans!
-    </p>
-    <a href="mailto:hej@axeltidehorn.se?subject=AT%20-%20fotografi%20" >hej@axeltidehorn.se</a>
-</div>
->>>>>>> 9f435a89803875efda27742233f667623e010a7f
+
 <script>
         // external js: masonry.pkgd.js, imagesloaded.pkgd.js
 
