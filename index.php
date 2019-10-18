@@ -24,7 +24,7 @@
 </div>
 <main>
 
-    <h1>AXEL TIDEHORN - FOTOGRAF</h1>
+    <h1>AXEL TIDEHORN<br> Landskap ⋅ Natur ⋅ Arkitektur ⋅ Porträtt ⋅ Event</h1>
 
 
     <?php

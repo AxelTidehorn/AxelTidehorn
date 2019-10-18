@@ -4,7 +4,7 @@
     <div class="about-wrapper">
         <h2>Axel Tidehorn</h2>
         <p>
-            Landskap ⋅ Natur ⋅ Arkitektur ⋅ Porträtt ⋅ Event
+            
         </p>
         <p>
             Ordet fotografi kommer från grekiskans phōs och graphé som översätts till ljus och skriva. Och om man lägger till tid så är det exakt det jag som fotograf gör. Skriver, berättar, genom att fånga ljus och tid i ögonblick.
