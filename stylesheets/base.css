@@ -1,28 +1,31 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap');
 
 *{
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
     list-style: none;
     padding:0;
     margin:0;
 }
 html{
-    background-color: #fff;
+    background-color: #191919;
 }
 p{
     font-weight: 300;
 }
 p,h2{
     margin-bottom:1em;
-    color: #212121;
+    color: #efefef;
 }
 h1{
     font-size: 26px;
     padding: .5em;
     color: #efefef;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 img{
@@ -30,6 +33,7 @@ img{
     height:auto;
     display: block;
 }
+
 
 
 @media(min-width:720px){

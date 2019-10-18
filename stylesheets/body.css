@@ -6,8 +6,7 @@ main{
     margin:auto;
     min-height:calc(100vh - 20em);
     padding:1.5em;
-    margin-top:4.5em;
-    margin-bottom: 5em;
+    margin-top:1em;
 }
 
 .intro-wrapper{
@@ -16,7 +15,7 @@ main{
     z-index: 1500;
     height: 100vh;
     width: 100%;
-    background-image: url("http://localhost/AxelTidehorn2/wordpress/wp-content/uploads/2019/08/IMG_6463.jpg");
+    background-image: url("http://localhost/AxelTidehorn2/wordpress/wp-content/uploads/2019/08/IMG_6725.jpg");
     background-position: center;
     background-repeat: no-repeat;
     padding: 5em;

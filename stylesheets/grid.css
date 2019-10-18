@@ -25,7 +25,7 @@
 .grid-item img {
   display: block;
   max-width: 100%;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
 }
 
 
@@ -48,24 +48,39 @@
 
 /*A bunch of other stuff*/
 
+.wave-wrapper{
+    margin-bottom: -2em;
+
+}
 .contact-wrapper{
-    margin: 4em 0 0 0;
+    margin: 0 0 0 0;
     display: flex;
     flex-direction: column;
+    padding: 1em 2em;
+    background-color: #212121;
+    text-align: center;
 }
 .contact-wrapper > p{
-    font-size: 33px;
+    font-size: 24px;
     font-weight: 700;
     margin-bottom: 0;
 }
-.contact-wrapper > a{
+.email-wrapper > a{
     font-size: 22px;
     font-weight: 300;
     text-decoration: underline;
-    color: black;
+    color: white;
 
     transition: .25s ease;
 }
-.contact-wrapper > a:hover{
-    color: #8c3788;
+.email-wrapper{
+    text-align: center;
+    padding: 1em;
+    border: solid 2px white;
+    margin: 2em auto;
+    display: block;
+    width: auto;
+}
+.email-wrapper > a:hover{
+    color: #eb4034;
 }

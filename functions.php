@@ -1,6 +1,6 @@
 
-<?php 
-    
+<?php
+
     require('includes/reg_menus.php');
   //  require('includes/reg_post_types.php');
 
@@ -9,5 +9,6 @@
 
 
     add_theme_support('post-thumbnails');
+
 
 ?>
