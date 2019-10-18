@@ -8,7 +8,6 @@
                     <a SameSite=secure href="email"><i class="far fa-envelope"></i></a>
                 </div>
                 <div class="logo-wrapper-foot">
-                    <img src="http://localhost/AxelTidehorn/wordpress/wp-content/uploads/2019/08/LogoTxtW.png" alt="">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo/LogoTxtW.svg" />
                 </div>
                 <div class="maker">

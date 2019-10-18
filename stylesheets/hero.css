@@ -1,6 +1,6 @@
 .hero{
     display: block;
-    background-image: url('http://localhost/AxelTidehorn2/wordpress/wp-content/uploads/2019/10/IMG_6938.jpg');
+    background-image: url('http://localhost/AxelTidehorn2/wordpress/wp-content/uploads/2019/08/CNV00015.jpg');
     background-position: center;
     background-blend-mode: darken;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@
 .hero-overlay::after{
     background-color: #efefef;
     bottom: 0;
-<<<<<<< HEAD
+
     content: '';
     display: block;
     height: 4px;
@@ -30,10 +30,8 @@
     transform: translate(-50%,0);
     width: 40%;
     border-radius: 10px;
-=======
-    left: -190px;
-    height: auto;
-    width: 500px;
+
+
 }
 .right-wrapper{
     position:relative;
