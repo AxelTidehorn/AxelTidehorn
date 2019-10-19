@@ -21,19 +21,22 @@ for(let i = 0; i < texts.length; i++){
 
 {
 
-    const chars = document.querySelectorAll(".char");
-    console.log(chars)
+    for(let i = 0; i < textElts.length; i++){
+        const chars = textElts[i].querySelectorAll(".char");
 
-    const revealChars = async() =>{
+        const revealChars = async() =>{
 
-        for(let i = 0; i < chars.length; i++){
-            (function(ind) {
-                setTimeout(function(){chars[ind].classList.add("reveal");;}, 100 + (50 * ind));
-            })(i);
+            for(let i = 0; i < chars.length; i++){
+                (function(ind) {
+                    setTimeout(function(){chars[ind].classList.add("reveal");;}, 500 + (50 * ind));
+                })(i);
+            }
+
         }
+
+        revealChars();
 
     }
 
-    revealChars();
 
 }
