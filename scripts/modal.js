@@ -1,10 +1,7 @@
-console.log("modal!")
-
 const modal = document.getElementById("modal");
 const image = document.getElementById("modal-image");
 
 function openImageModal(img_url){
-    console.log(img_url)
     image.style.backgroundImage  = `url(${img_url})`;
     image.style.backgroundSize  = `contain`;
     image.style.backgroundRepeat  = `no-repeat`;
@@ -13,6 +10,5 @@ function openImageModal(img_url){
 }
 
 function closeModal(){
-    console.log("closing")
     modal.classList.remove("visible");
 }

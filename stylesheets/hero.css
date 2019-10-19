@@ -1,16 +1,27 @@
 .hero{
+    position: relative;
     display: block;
-    background-image: url('http://localhost/AxelTidehorn2/wordpress/wp-content/uploads/2019/10/IMG_8778.jpg');
+    transform: rotate(360deg);
+    height: 90vh;
+    margin-bottom: 4em;
+    overflow: hidden;
+
+}
+
+.hero-background{
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-image: url('../img/hero-bg.jpg');
     background-position: center;
     background-blend-mode: darken;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    transform: rotate(360deg);
-    height: 90vh;
-    margin-bottom: 4em;
-
 }
+
 .hero-overlay{
     background: rgb(25,25,25);
     background: linear-gradient(0deg, rgba(25,25,25,1) 0%, rgba(25,25,25,0) 100%);
@@ -87,5 +98,4 @@
         padding: 0 5em;
         font-weight: 300;
     }
->>>>>>> 9f435a89803875efda27742233f667623e010a7f
 }
