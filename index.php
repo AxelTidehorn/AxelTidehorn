@@ -21,8 +21,8 @@
     <div class="hero-background parallax" data-depth="-0.1"></div>
     <div class="hero-overlay">
         <div class="hero-text">
-            <h2>AXEL TIDEHORN</h2>
-            <p>
+            <h2 class="fade-text">AXEL TIDEHORN</h2>
+            <p class="fade-text">
                 Landskap • Event • Porträtt • Arkitektur
             </p>
         </div>
@@ -76,6 +76,7 @@
 </div>
 
 <!-- Modal end -->
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/text-reveal.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/parallax.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/modal.js"></script>
 

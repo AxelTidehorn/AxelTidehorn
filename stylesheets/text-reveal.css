@@ -1,0 +1,14 @@
+
+
+.fade-text{
+
+}
+
+.fade-text .char{
+    opacity:0;
+    transition: .2s ease-out opacity;
+}
+
+.fade-text .char.reveal{
+    opacity:1;
+}
