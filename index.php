@@ -49,7 +49,7 @@
 
             <div class="grid-sizer"></div>
             <div class="grid-item">
-                <div class="grid-content-wrapper" onClick="openImageModal('<?php echo get_the_post_thumbnail_url($post->ID,'full') ?>')">
+                <div class="grid-content-wrapper" onClick="openImageModal('<?php echo get_the_post_thumbnail_url($post->ID,'full') ?>','<?php the_title() ?>','<?php echo get_the_content() ?>')">
                     <img src='<?php echo get_the_post_thumbnail_url($post->ID,'full') ?>'>
                     <?php //the_title() ?>
                 </div>
@@ -72,6 +72,12 @@
     <!--<button onClick="closeModal()" class="close-modal">Close modal</button>-->
     <div class="modal-image" id="modal-image">
 
+    </div>
+    <div class="info">
+        <div class="info-wrapper">
+            <h3 id="title"></h3>
+            <p id="content"></p> 
+        <div>
     </div>
 </div>
 

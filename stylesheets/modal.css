@@ -42,3 +42,26 @@
     right:0;
     margin:1.5em;
 }
+
+.modal .info{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    color:#FFF;
+    background:rgba(0,0,0,0.5);
+}
+
+.modal .info-wrapper{
+    padding:1em;
+    max-width: 1280px;
+    margin:auto;
+}
+
+.info-wrapper h3{
+    margin-bottom:.5em;
+}
+
+.info-wrapper div:last-child{
+    margin-bottom:-1em;
+}
