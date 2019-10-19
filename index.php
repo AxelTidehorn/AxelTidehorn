@@ -20,9 +20,8 @@
 <div class="hero">
     <div class="hero-overlay">
         <div class="hero-text">
+            <h2>AXEL TIDEHORN</h2>
             <p>
-                AXEL TIDEHORN
-                <br>
                 Landskap | Event | Porträtt | Arkitektur
             </p>
         </div>
