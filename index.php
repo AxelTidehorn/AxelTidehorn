@@ -18,7 +18,7 @@
     </div>
 </div>-->
 <div class="hero">
-    <div class="hero-background parallax" data-depth="-0.2"></div>
+    <div class="hero-background parallax" data-depth="-0.1"></div>
     <div class="hero-overlay">
         <div class="hero-text">
             <h2>AXEL TIDEHORN</h2>
