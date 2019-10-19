@@ -125,7 +125,7 @@
         Gillar ni vad ni ser? Tveka inte att höra av dig!
     </p>
     <div class="email-wrapper">
-        <a href="hej@axeltidehorn.se">hej@axeltidehorn.se</a>
+        <a href="mailto:hej@axeltidehorn.se">hej@axeltidehorn.se</a>
     </div>
 
 </div>
