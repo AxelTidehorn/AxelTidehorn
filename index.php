@@ -19,14 +19,17 @@
 </div>-->
 <div class="hero">
     <div class="hero-overlay">
+        <div class="hero-text">
+            <p>
+                AXEL TIDEHORN
+                <br>
+                Landskap | Event | Porträtt | Arkitektur
+            </p>
+        </div>
 
     </div>
 </div>
 <main>
-
-    <h1>AXEL TIDEHORN<br> Landskap ⋅ Natur ⋅ Arkitektur ⋅ Porträtt ⋅ Event</h1>
-
-
     <?php
         if ( have_posts() ) {
 

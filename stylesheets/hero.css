@@ -1,12 +1,14 @@
 .hero{
     display: block;
-    background-image: url('http://localhost/AxelTidehorn2/wordpress/wp-content/uploads/2019/10/A001379-R1-18-22A.jpg');
+    background-image: url('http://localhost/AxelTidehorn2/wordpress/wp-content/uploads/2019/10/IMG_8778.jpg');
     background-position: center;
     background-blend-mode: darken;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     transform: rotate(360deg);
-    height: 80vh;
+    height: 90vh;
+    margin-bottom: 4em;
 
 }
 .hero-overlay{
@@ -14,7 +16,7 @@
     background: linear-gradient(0deg, rgba(25,25,25,1) 0%, rgba(25,25,25,0) 100%);
     z-index: 1000;
     display: block;
-    height: 90vh;
+    height: 100vh;
     position: relative;
     bottom: 10vh;
 }
@@ -30,8 +32,17 @@
     transform: translate(-50%,0);
     width: 40%;
     border-radius: 10px;
-
-
+}
+.hero-text{
+    display: block;
+    position: absolute;
+    bottom: 2.5em;
+    width: 100%;;
+    margin: auto;
+    text-align: center;
+}
+.hero-text > p{
+    font-size: 22px
 }
 .right-wrapper{
     position:relative;
