@@ -18,6 +18,7 @@
     </div>
 </div>-->
 <div class="hero">
+    <div class="hero-background parallax" data-depth="-0.2"></div>
     <div class="hero-overlay">
         <div class="hero-text">
             <h2>AXEL TIDEHORN</h2>
@@ -75,7 +76,7 @@
 </div>
 
 <!-- Modal end -->
-
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/parallax.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/modal.js"></script>
 
 <script>
