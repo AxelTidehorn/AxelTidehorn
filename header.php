@@ -44,7 +44,7 @@
                 const menu = document.querySelector(".mobile-menu");
                 const hamburger = document.getElementById("hamburger");
                 const logo = document.querySelector("svg");
-                const header = document.querySelector(".header-wrapper")
+                const header = document.querySelector("header")
 
                 menu.classList.toggle("reveal-menu");
                 hamburger.classList.toggle("clicked");
@@ -56,7 +56,7 @@
                 }
             };
 
-            const header = document.querySelector(".header-wrapper");
+            const header = document.querySelector("header");
             function reveal() {
                 if(window.scrollY === 0){
                     header.classList.remove("reveal");

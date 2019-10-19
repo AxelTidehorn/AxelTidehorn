@@ -7,6 +7,9 @@ header{
     font-weight: 700;
     z-index: 1000;
     box-sizing: border-box;
+    background-color: rgba(0,0,0,0);
+
+    transition: .25s ease-in;
 }
 
 
@@ -14,18 +17,19 @@ header{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    max-width:100%;
+    max-width:1280px;
+    margin:auto;
     padding: .4em;
-    background-color: #19191900;
-    transition: .25s ease-in;
+
+   
     /*-webkit-box-shadow: 0px 2px 4px -1px rgba(39,39,39,.7);
     -moz-box-shadow: 0px 2px 4px -1px rgba(39,39,39,.7);
     box-shadow: 0px 2px 4px -1px rgba(39,39,39,.7);*/
 }
 
-.header-wrapper.reveal{
-    background-color: #191919;
+header.reveal{
     border-bottom: none;
+    background-color: #191919;
     -webkit-box-shadow: 0px 2px 4px -1px rgba(25,25,25,.7);
     -moz-box-shadow: 0px 2px 4px -1px rgba(25,25,25,.7);
     box-shadow: 0px 2px 4px -1px rgba(25,25,25,.7);
