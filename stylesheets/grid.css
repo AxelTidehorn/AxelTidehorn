@@ -83,6 +83,7 @@
     background-color: #212121;
     text-align: center;
     min-height:420px;
+    height:50vh;
 }
 .contact-wrapper > p{
     font-size: 24px;
