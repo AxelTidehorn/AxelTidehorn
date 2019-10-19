@@ -3,7 +3,7 @@
     display: block;
     transform: rotate(360deg);
     height: 90vh;
-    margin-bottom: 4em;
+    margin-bottom: 1em;
     overflow: hidden;
 
 }
@@ -46,7 +46,7 @@
 .hero-text{
     display: block;
     position: absolute;
-    bottom: 1em;
+    bottom: 0;
     width: 100%;;
     margin: auto;
     text-align: center;

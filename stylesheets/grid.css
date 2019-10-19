@@ -25,11 +25,13 @@
 
 .grid-content-wrapper:hover img{
     transform:scale(1.05);
+    transition: ease-in-out 1s;
 }
 
 .grid-content-wrapper{
     overflow: hidden;
     cursor:pointer;
+
 }
 
 .grid-item img {
