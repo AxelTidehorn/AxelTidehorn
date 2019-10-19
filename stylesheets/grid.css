@@ -23,7 +23,7 @@
   overflow:hidden;
 }
 
-.grid-item:hover img{
+.grid-content-wrapper:hover img{
     transform:scale(1.05);
 }
 
@@ -35,7 +35,7 @@
 .grid-item img {
   display: block;
   max-width: 100%;
-  transition: .3s ease-out transform;
+  transition: .2s ease-out transform;
   /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
 }
 
