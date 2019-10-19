@@ -22,7 +22,6 @@
         <div class="hero-text">
             <h2>AXEL TIDEHORN</h2>
             <p>
-                Landskap | Event | Porträtt | Arkitektur
             </p>
         </div>
 
