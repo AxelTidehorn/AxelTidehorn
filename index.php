@@ -36,18 +36,22 @@
                 the_post();
 
     ?>
+            <!--<div class="grid-sizer"></div>
+            <div class="grid-item">
+                <a href=<?php //echo the_permalink();?>>
+                    <img src='<?php //echo get_the_post_thumbnail_url($post->ID,'full') ?>'>
+                    <?php //the_title() ?>
+                </a>
+            </div>-->
+
             <div class="grid-sizer"></div>
             <div class="grid-item">
-                <a href=<?php echo the_permalink();?>>
+                <div class="grid-content-wrapper" onClick="openImageModal('<?php echo get_the_post_thumbnail_url($post->ID,'full') ?>')">
                     <img src='<?php echo get_the_post_thumbnail_url($post->ID,'full') ?>'>
-                    <!--figure style="background:url('<?php //echo get_the_post_thumbnail_url($post->ID,'full') ?>'); background-size:cover; background-position:center;">
-                    </figure-->
-                    <!--
-        <h2>
-                        <?php the_title() ?>
-                    </h2>-->
-                </a>
+                    <?php //the_title() ?>
+                </div>
             </div>
+
     <?php
 
 
@@ -57,9 +61,20 @@
 
         }
 
-
 ?>
 
+<!-- Modal -->
+
+<div class="modal" id="modal"  onClick="closeModal()">
+    <!--<button onClick="closeModal()" class="close-modal">Close modal</button>-->
+    <div class="modal-image" id="modal-image">
+
+    </div>
+</div>
+
+<!-- Modal end -->
+
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/modal.js"></script>
 
 <script>
         // external js: masonry.pkgd.js, imagesloaded.pkgd.js
