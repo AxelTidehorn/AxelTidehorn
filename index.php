@@ -18,7 +18,7 @@
     </div>
 </div>-->
 <div class="hero">
-    <div class="hero-background parallax" data-depth="-0.1"></div>
+    <div class="hero-background parallax" data-depth="-0.2"></div>
     <div class="hero-overlay">
         <div class="hero-text">
             <h2 class="fade-text">AXEL TIDEHORN</h2>
@@ -76,7 +76,7 @@
     <div class="info">
         <div class="info-wrapper">
             <h3 id="title"></h3>
-            <p id="content"></p> 
+            <p id="content"></p>
         <div>
     </div>
 </div>

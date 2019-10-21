@@ -53,13 +53,18 @@
 }
 
 .modal .info-wrapper{
-    padding:1em;
+    padding:.5em 1em;
     max-width: 1280px;
     margin:auto;
 }
 
 .info-wrapper h3{
-    margin-bottom:.5em;
+    margin-bottom:.1em;
+}
+
+.info-wrapper > p{
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
 }
 
 .info-wrapper div:last-child{
