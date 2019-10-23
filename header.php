@@ -3,6 +3,8 @@
   <head>
         <title>Axel Tidehorn | Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
         <script src="https://kit.fontawesome.com/8f51a7ee18.js"></script>
         <link rel="stylesheet" href=<?php bloginfo('stylesheet_url'); ?>>
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
