@@ -3,7 +3,7 @@
 
 
 <div class="hero">
-    <div class="hero-background parallax" data-depth="-0.2"></div>
+    <div id="hero-bg" class="hero-background parallax hidden" data-depth="-0.2" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/hero-bg.jpg)"></div>
     <div class="hero-overlay">
         <div class="hero-text">
             <h2 class="fade-text">AXEL TIDEHORN</h2>
@@ -70,6 +70,17 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/text-reveal.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/parallax.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/modal.js"></script>
+
+<script type="text/javascript">
+
+    const img = new Image();
+    img.onload = function() {
+        document.getElementById("hero-bg").classList.remove("hidden");
+    };
+
+    img.src = "<?php echo get_template_directory_uri(); ?>/img/hero-bg.jpg";
+
+</script>
 
 <script>
         // external js: masonry.pkgd.js, imagesloaded.pkgd.js
