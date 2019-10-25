@@ -110,7 +110,7 @@
         Gillar ni vad ni ser? Tveka inte att höra av er!
     </p>
     <div class="email-wrapper">
-        <a href="mailto:hej@axeltidehorn.se">hej@axeltidehorn.se</a>
+        <a href="mailto:kontakt@axeltidehorn.se">kontakt@axeltidehorn.se</a>
     </div>
 
 </div>
