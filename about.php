@@ -10,10 +10,11 @@
             Ordet fotografi kommer från grekiskans phōs och graphé som översätts till ljus och skriva. Och om man lägger till tid så är det exakt det jag som fotograf gör. Skriver, berättar, genom att fånga ljus och tid i ögonblick.
         </p>
         <div class="portrait-wrapper">
-            <div class="portrait-overlay">
-                <img src="http://localhost/AxelTidehorn2/wordpress/wp-content/uploads/2019/10/IMG_8996.jpg" alt="">
-            </div>
+            <div class="portrait"style="background-image:url(<?php echo get_template_directory_uri();?>/img/hero-bg5.jpg)">
+                <div class="portrait-overlay">
+                </div>
 
+            </div>
         </div>
         <p>
             Mitt namn är Axel Tidehorn och jag är en Jönköpingsbaserad fotograf vars mål är att fånga och berätta Er historia. Oavsett om det är Ert företag, produkt, familj, husdjur eller Er stora dag.

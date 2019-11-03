@@ -9,6 +9,37 @@
     color: #fefefe;
     line-height: 2em;
 }
+.portrait{
+    position: relative;
+    display: block;
+    transform: rotate(360deg);
+    height: 40vh;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    background-position: center;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+
+}
+.portrait-wrapper{
+    position: relative;
+    top:0;
+    left:0;
+    height:100%;
+    max-width:100%;
+    margin: auto;
+}
+.portrait-overlay{
+    background: rgb(25,25,25);
+    background: linear-gradient(0deg, rgba(25,25,25,1) 10%, rgba(40,40,40,0.3218546250287224) 50%, rgba(25,25,25,0.8747958014993107) 100%);
+    display: block;
+    height: 40vh;
+    position: relative;
+    bottom: 0;
+    margin: auto;
+}
 
 .accordion {
   background-color: #212121;
