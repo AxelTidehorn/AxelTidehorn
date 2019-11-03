@@ -1,4 +1,3 @@
-
 <?php
 
     require('includes/reg_menus.php');
