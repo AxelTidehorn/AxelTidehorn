@@ -28,8 +28,8 @@
 }
 
 .hero-overlay{
-    background: rgb(25,25,25);
-    background: linear-gradient(0deg, rgba(25,25,25,1) 0%, rgba(25,25,25,0) 100%);
+    background: rgb(09,09,09);
+    background: linear-gradient(0deg, rgba(9,9,9,1) 0%, rgba(9,9,9,0) 100%);
     z-index: 1000;
     display: block;
     height: 100vh;
