@@ -114,11 +114,11 @@
    </script>
 </main>
 <div class="wave-wrapper">
-    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1440 320"><path fill="#151515" fill-opacity="1" d="M0,160L60,138.7C120,117,240,75,360,69.3C480,64,600,96,720,133.3C840,171,960,213,1080,208C1200,203,1320,149,1380,122.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#111111" fill-opacity="1" d="M0,224L1440,64L1440,320L0,320Z"></path></svg>
 </div>
 <div class="contact-wrapper" id="contact">
     <p>
-        Gillar ni vad ni ser? Tveka inte att höra av er!
+        Ska vi jobba tillsammans?
     </p>
     <div class="email-wrapper">
         <a href="mailto:kontakt@axeltidehorn.se">kontakt@axeltidehorn.se</a>
