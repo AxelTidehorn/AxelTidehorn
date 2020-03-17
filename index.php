@@ -14,7 +14,7 @@
 
     </div>
     <div class="wave-wrapper-top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#263f2c" fill-opacity="1" d="M0,64L1440,288L1440,0L0,0Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#263f2c" fill-opacity="1" d="M0,160L1440,96L1440,0L0,0Z"></path></svg>
     </div>
 </div>
 <main>
