@@ -2,9 +2,10 @@
     position: relative;
     display: block;
     transform: rotate(360deg);
-    height: 90vh;
-    margin-bottom: 1em;
+    height: 20vh;
+    margin-bottom: 0;
     overflow: hidden;
+    background-color: #263f2c;
 
 }
 

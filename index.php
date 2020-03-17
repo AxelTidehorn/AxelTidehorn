@@ -3,15 +3,18 @@
 
 
 <div class="hero">
-    <div id="hero-bg" class="hero-background parallax hidden" data-depth="-0.2" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/hero-bg.jpg)"></div>
-    <div class="hero-overlay">
+    <!-- div id="hero-bg" class="hero-background parallax hidden" data-depth="-0.2" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/hero-bg.jpg)"></div>
+    <div class="hero-overlay"!-->
         <div class="hero-text">
-            <h2 class="fade-text">AXEL TIDEHORN</h2>
+            <!--h2 class="fade-text">AXEL TIDEHORN</h2!-->
             <p class="fade-text">
                 Landskap • Event • Porträtt • Arkitektur
             </p>
         </div>
 
+    </div>
+    <div class="wave-wrapper-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#263f2c" fill-opacity="1" d="M0,64L1440,288L1440,0L0,0Z"></path></svg>
     </div>
 </div>
 <main>
