@@ -2,7 +2,7 @@
     position: relative;
     display: block;
     transform: rotate(360deg);
-    height: 20vh;
+    height: 40vh;
     min-height: 200px;
     margin-bottom: 0;
     overflow: hidden;
@@ -34,22 +34,11 @@
     background: linear-gradient(0deg, rgba(9,9,9,1) 0%, rgba(9,9,9,0) 100%);
     z-index: 1000;
     display: block;
-    height: 100vh;
+    height: 50vh;
     position: relative;
     bottom: 10vh;
 }
-.hero-overlay::after{
-    background-color: #efefef;
-    bottom: -2em;
-    content: '';
-    display: block;
-    height: 4px;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,0);
-    width: 40%;
-    border-radius: 10px;
-}
+
 .hero-text{
     display: block;
     position: absolute;
