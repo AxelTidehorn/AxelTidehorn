@@ -57,6 +57,7 @@
                if(activeElt !== elt){
                     activeElt.classList.remove("active");
                     activeElt.nextElementSibling.style.maxHeight = null;
+                    activeElt.nextElementSibling.classList.remove('visible');
                }
             }
 
@@ -64,7 +65,9 @@
             var panel = elt.nextElementSibling;
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
+                panel.classList.remove('visible');
             } else {
+                panel.classList.add('visible');
                 panel.style.maxHeight = panel.scrollHeight + "px";
             }
         }
