@@ -62,32 +62,40 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 1em 2em;
     background-color: #263f2c;
+    background-color: #18181a;
     text-align: center;
     min-height:420px;
     height:40vh;
 }
 .contact-wrapper > p{
-    font-size: 50px;
+    font-size: 24px;
     font-weight: 700;
     margin-bottom: 0;
 }
 .email-wrapper > a{
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 300;
     text-decoration: underline;
     color: white;
 
     transition: .25s ease;
 }
+
+@media(min-width:720px){
+    .email-wrapper > a{
+        font-size:24px;
+    }
+}
 .email-wrapper{
     text-align: center;
     padding: 1em;
     border: solid 2px white;
-    margin: 2em auto;
     display: block;
     width: auto;
+    margin-top: 2em;
 }
 .email-wrapper > a:hover{
     color: #eb4034;
@@ -109,7 +117,7 @@
         width:calc(100%/3);
     }
     .contact-wrapper > p{
-        font-size: 62px;
+        font-size: 42px;
     }
 
 }

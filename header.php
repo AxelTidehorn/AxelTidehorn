@@ -14,7 +14,11 @@
 
 
     <body>
+        <?php if(is_page_template('about.php')): ?>
+        <header class='about-header'>
+        <?php else: ?>
         <header>
+        <?php endif; ?>
             <div class="header-wrapper">
                 <div class="logo-wrapper">
                     <a href="<?php echo home_url(); ?>">
@@ -52,20 +56,22 @@
                 hamburger.classList.toggle("clicked");
                 logo.classList.toggle("click");
 
-                if (header.classList.contains("reveal")) {
+                /*if (header.classList.contains("reveal")) {
                     header.classList.toggle("reveal")
-                    console.log("yes");
-                }
+                }*/
             };
 
             const header = document.querySelector("header");
             function reveal() {
-                if(window.scrollY === 0){
+                if(window.scrollY < header.offsetHeight){
                     header.classList.remove("reveal");
                 }else{
                     header.classList.add("reveal");
                 }
             };
+
+            reveal();
+            
             window.addEventListener("scroll", reveal);
 
         </script>

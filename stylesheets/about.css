@@ -5,9 +5,10 @@
     max-width: 720px;
 }
 .about-wrapper p{
-    font-size: 1em;
-    color: #000;
-    line-height: 2em;
+  font-size: .9em;
+  font-weight: 300;
+  color: #000;
+  line-height: 2em;
 }
 .about-wrapper h2{
     color: #000;
@@ -34,6 +35,7 @@
     height:100%;
     max-width:100%;
     margin: auto;
+    margin-bottom:1em;
 }
 .portrait-overlay{
     background: rgb(25,25,25);
@@ -49,7 +51,7 @@
   background-color: #fefefe;
   color: #000;
   cursor: pointer;
-  padding: 18px;
+  padding: 12px 18px;
   width: 100%;
   border: none;
   text-align: left;
@@ -57,10 +59,11 @@
   font-size: 15px;
   transition: .25s ease;
   position: relative;
+  box-shadow:0 3px 5px -3px rgba(0,0,0,0.1), 0 5px 10px -3px rgba(0,0,0,0.1);
 }
 
 .active, .accordion:hover {
-  background-color: #e3e3e3;
+  background-color: #f2f2f2;
 }
 
 .accordion:after {
@@ -82,7 +85,7 @@
   width:1em;
   height:2px;
   display: block;
-  background: #efefef;
+  background: #000;
   font-weight: bold;
   float: right;
   position: absolute;
@@ -92,10 +95,12 @@
   transition: .2s ease-out transform, .2s ease-out background-color;
 }
 
-
+.accordion:before{
+  transform:rotate(90deg);
+}
 
 .active:before {
-  transform:rotate(90deg);
+  transform:rotate(0deg);
 }
 
 .active:before, .active:after{
@@ -108,6 +113,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
+  margin-bottom:1em;
 }
 
 .panel p{

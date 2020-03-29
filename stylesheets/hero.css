@@ -3,10 +3,11 @@
     display: block;
     transform: rotate(360deg);
     height: 20vh;
+    min-height: 200px;
     margin-bottom: 0;
     overflow: hidden;
     background-color: #263f2c;
-
+    background-color: #18181a;
 }
 
 .hero-background{
@@ -58,7 +59,7 @@
     text-align: center;
 }
 .fade-text{
-    font-size: 22px
+    font-size: 18px
 }
 .right-wrapper{
     position:relative;
@@ -98,7 +99,7 @@
         width: 1100px;
     }
     .fade-text{
-        font-size: 43px
+        font-size: 2em
     }
     .right-wrapper{
         padding: 5em 0;
