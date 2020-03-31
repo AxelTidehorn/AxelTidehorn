@@ -21,10 +21,10 @@
             Era önskningar och mål är det viktigaste för mig och jag tror att vi tillsammans kan fånga ljuset och skapa något magiskt!
         </p>
         <div class="acc-wrapper">
-            <button type="button" name="button" class="accordion">Porträtt</button>
+            <button type="button" name="button" class="accordion">Arkitektur</button>
             <div class="panel">
                 <p>
-                    Ett bra porträtt öppnar nya dörrar oavsett om det
+                    Lorem Ipsum Dolor Sit Amet
                 </p>
             </div>
             <button type="button" name="button" class="accordion">Analog</button>
@@ -75,7 +75,7 @@
 </script>
 </main>
 <div class="wave-wrapper">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#18181a" fill-opacity="1" d="M0,224L1440,64L1440,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7b7b7c" fill-opacity="1" d="M0,224L1440,64L1440,320L0,320Z"></path></svg>
 </div>
 <div class="contact-wrapper" id="contact">
     <p>

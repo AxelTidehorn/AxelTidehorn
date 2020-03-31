@@ -42,6 +42,11 @@
         </header>
         <nav class="mobile-menu">
             <?php wp_nav_menu(array('theme_location => header-menu')) ?>
+            <div class="social-wrapper">
+                <a SameSite=secure target="_blank" href="https://www.instagram.com/axeltidehornphotography/"><i class="fab fa-instagram"></i></a>
+                <a SameSite=secure target="_blank" href="https://www.linkedin.com/in/axeltidehorn/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:hej@axeltidehorn.se"><i class="far fa-envelope"></i></a>
+            </div>
         </nav>
 
         <script>
@@ -71,7 +76,7 @@
             };
 
             reveal();
-            
+
             window.addEventListener("scroll", reveal);
 
         </script>

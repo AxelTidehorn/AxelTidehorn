@@ -7,9 +7,7 @@
                     <a SameSite=secure target="_blank" href="https://www.linkedin.com/in/axeltidehorn/"><i class="fab fa-linkedin-in"></i></a>
                     <a href="mailto:hej@axeltidehorn.se"><i class="far fa-envelope"></i></a>
                 </div>
-                <div class="logo-wrapper-foot">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo/LogoTxtW.svg" />
-                </div>
+                
                 <div class="maker">
                     <small>Axel Tidehorn, <?php echo date("Y"); ?></small>
                 </div>
