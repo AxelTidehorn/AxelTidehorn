@@ -90,7 +90,7 @@
         font-size:24px;
     }
 }
-.email-wrapper{
+/*.emailButton{
     text-align: center;
     padding: 1em;
     border: solid 2px white;
@@ -100,9 +100,75 @@
 }
 .email-wrapper > a:hover{
     color: #eb4034;
+}*/
+
+/*.emailButton{
+    background:#000;
+    border-radius:2px;
+    padding:1em 1.5em;
+    color:#FFF;
+    margin-top:1em;
+    box-shadow:0 3px 5px -3px rgba(0,0,0,0.5), 0 2px 20px rgba(0,0,0,0.5);
+}*/
+
+.emailButton{
+    background:none;
+    border:solid #FFF 2px;
+    border-radius:2px;
+    padding:1em 1.5em;
+    color:#FFF;
+    margin-top:2em;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    transition:.2s ease-out all;
 }
 
+.emailButton::after{
+    content:"";
+    box-shadow:0 3px 5px -3px rgba(0,0,0,0.5), 0 5px 25px -5px rgba(0,0,0,0.5), 0 10px 15px -10px rgba(0,0,0,0.5);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: -1;
+    border-radius: 2px;
+    opacity: 0;
+    transition: .2s ease-out opacity;
+}
 
+.emailButton::before{
+    content:"";
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background:#000;
+    transform:scaleY(0);
+    transition:all .2s ease-out;
+    z-index: -1;
+    transform-origin: bottom;
+}
+
+.emailButton:hover{
+    color:#FFF;
+    transform:translateY(-5px);
+    border:solid rgba(0,0,0,1) 2px;
+}
+
+.emailButton:hover::after{
+    opacity:1;
+}
+
+.emailButton:hover::before {
+    transform:scaleY(1);
+}
+
+.emailButton:active{
+    transform:translateY(-2px);
+}
 
 @media(min-width:720px){
     .grid-item,

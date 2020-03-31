@@ -41,6 +41,7 @@ header.reveal g, header.about-header g{
 header.reveal .menu a, header.about-header .menu a{
     color:#000;
 }
+
 .menu {
     display:flex;
 }
@@ -76,3 +77,4 @@ header.reveal .menu a, header.about-header .menu a{
 .svg.click g{
     fill: #000;
 }
+

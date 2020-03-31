@@ -126,9 +126,7 @@
     <p>
         Ska vi jobba tillsammans?
     </p>
-    <div class="email-wrapper">
-        <a href="mailto:kontakt@axeltidehorn.se">kontakt@axeltidehorn.se</a>
-    </div>
+    <a class="emailButton" href="mailto:kontakt@axeltidehorn.se">kontakt@axeltidehorn.se</a>
 
 </div>
 
