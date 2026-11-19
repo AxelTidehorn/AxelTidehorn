@@ -177,31 +177,9 @@ Varför jag tror att "närvaro" går att påverka: B&O:s DSP har en lätt sänkn
 
 ### D3. Preliminärt kopplingsschema (🧮, värden gäller antagen impedans)
 
-```
- AMP+ ──┬─────────────────────────────────────────────────────────────────────────────────────
-        │
-        │  GREN W1 – nedre bas
-        ├──[R1a 2,2Ω]──[R1b 3,3Ω]──[L1 3,9 mH]──┬────────────────────────────────── W1+
-        │   S1 kortsluter R1a och/eller R1b      │
-        │                                       [C1 15µF]
-        │                                        │
-        │  GREN W2 – övre bas                    │
-        ├──[TRAP]──[L2 0,82 mH]──┬───────┬───────┼────────────────────────────────── W2+
-        │                        │       │       │
-        │   TRAP =               [C2]    [Rz]    │
-        │   Lt 0,47 mH           8,2µF   6,8Ω    │
-        │   ∥ Ct 10 µF           │       │       │
-        │   ∥ (Rta 2,2Ω + Rtb 3,3Ω)     [Cz]    │
-        │   S2 kortsluter hela   [RC2]   8,2µF   │
-        │   trapen eller Rtb      1,0Ω   │       │
-        │                        │       │       │
-        │  GREN T – diskant      │       │       │
-        └──[C3 4,7µF]──┬──[C4 22µF]──[Rs1 2,7Ω]──[Rs2 1,8Ω]──[Rs3 2,7Ω]──┬──────────── T+
-                       │                 S3 kortsluter Rs2+Rs3 eller Rs3  │
-                     [L3 0,22 mH]                                       [Rp 15Ω]
-                       │                 │       │       │                │
- AMP− ─────────────────┴─────────────────┴───────┴───────┴────────────────┴── W1− W2− T−
-```
+![Kopplingsschema MkII rev A](plots/04_schema_revA.png)
+
+*Figur 0. Kopplingsschema per högtalare, rev A. Streckat rött = element som respektive omkopplare kortsluter. Ritat av `sim/schematic.py`.*
 
 **Polaritet:** alla element kopplas i fas (+ till +) i simuleringen. Den passiva fasvridningen gav bäst summa med diskanten i fas 🧮. Det kontrolleras vid första lyssning och mätning (se G4).
 
@@ -395,6 +373,8 @@ När punkt 1–2 är klara tar jag fram rev B: slutliga värden, beställningsli
 - `plots/01_neutral.png`: grenar, summa och impedans i neutralläge, jämfört med B&O:s DSP-resultat.
 - `plots/02_switches.png`: verkan av varje omkopplare.
 - `plots/03_impedance_all.png`: impedans i alla 27 lägen.
+- `plots/04_schema_revA.png` / `.svg`: kopplingsschema (ritas av `sim/schematic.py`, kräver schemdraw).
+- `RL6000_MkII_forstudie_revA.pdf`: denna rapport som PDF.
 
 ### Simuleringsmetod
 Elektrisk överföringsfunktion per gren (stegnät med komplexa impedanser, inklusive spolarnas DCR och en modell av elementimpedansen) multipliceras med B&O:s uppmätta elementrespons (magnitud, med minimumfas rekonstruerad via kepstrum). Grenarna summeras komplext. **Detta är en beräknad akustisk respons i B&O:s mätvillkor, inte en verifierad frekvensgång i ditt rum.**
@@ -419,3 +399,6 @@ Slutsats: **diskantens data påverkar i praktiken bara nivån, som L-padet hante
 - DK Soundparts CK-059: <https://www.dksoundparts.com/product/capacitor-kit-beovox-redline-rl6000/> (via sökutdrag)
 - Technics SU-V505: <https://hifivintage.co.uk/portfolio/technics-su-v505-amplifier/>, <https://www.radiomuseum.org/r/technics_stereo_integrated_amplifier_su_v505_ek.html>
 - Soundimports (priser för spolar): <https://www.soundimports.eu/en/it-intertechnik-hqr32-082-71.html>
+
+### Bygga om PDF:en
+`python3 tools/build_report_html.py && node tools/html_to_pdf.js` (kräver python-markdown och Playwright/Chromium). Ta bort `_report.html` efteråt.
