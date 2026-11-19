@@ -16,7 +16,55 @@ Rådata: `data/beocreate_rl6000_curves.json`. Källan är B&O:s egna PDF-filer i
 
 ---
 
+## Sammanfattning – min replik i korthet
+
+Jag har gått igenom granskningen punkt för punkt med nya beräkningar. Granskaren har rätt i det mesta som spelar roll, och jag hittade dessutom tre fel i rev A som ingen av oss sett.
+
+**Granskaren har rätt om:**
+
+- **Originalfiltret.** Hi-Fi News skriver att RL60.2:s två baselement delar vid olika frekvenser, alltså att den är en 2,5-vägare. RL6000 är troligen likadan. Min slutsats om tvåvägare dras tillbaka. Det försvagar argumentet att 2,5-väg i sig är en förbättring.
+- **Närvarokontrollen låg i fel band** (0,7–2 kHz). Jag testade tre lösningar:
+    - en trap i övre basgrenen når inte över cirka 2,5 kHz, eftersom basen redan är på väg ut där
+    - en trap i serie med diskanten ger bara ±0,6 dB, eftersom högpassfiltret kompenserar bort den
+    - en shuntnotch över diskanten fungerar: **+2,5 / −1,6 dB vid 3–5 kHz**, eftersom högpassfiltret då förstärker effekten i stället.
+- **S3 var ingen ren nivåkontroll.** Den gav +1,7 dB vid 2,5 kHz men bara +0,6 dB vid 4 kHz. Ett L-pad med konstant impedans ger en jämn ändring från 3 kHz.
+- **Argumentet om att B&O inte använde någon fördröjning var svagt.** Det är ersatt med en känslighetsanalys: summan håller om diskantens akustiska centrum ligger mellan 20 mm framför och 10 mm bakom basens. Ligger diskanten 20–30 mm bakom uppstår en dipp på 5–8 dB.
+- **450 Hz saknade motivering.** Värdet kom ur anpassningen till B&O:s mätningar, inte ur B&O:s DSP. Ett svep mellan 300 och 800 Hz visar bara ±1 dB skillnad i fritt fält. Vid väggmontering blir alla alternativ 3–5 dB för basstarka, och det ska bas/vägg-reglaget hantera, inte delningsfrekvensen.
+
+**Delvis överdrivet, här försvarar jag konstruktionen:**
+
+- **Impedansen.** Lasten är en vanlig 4 Ω-last. Den uppfyller IEC:s regel att minimum ska vara minst 80 % av nominell impedans (3,2 Ω för 4 Ω). Den tyngsta belastningen på slutsteget motsvarar ett rent motstånd på 1,8–1,9 Ω (EPDR), jämfört med 2,3 Ω uppmätt på RL60.2. Använd bara en högtalarutgång på SU-V505, aldrig A+B. Granskarens "4 Ω-gräns" gäller nominell impedans, inte minimum.
+- **Omkopplarfel.** Jag har nu kontrollerat att alla fyra kombinationerna av kontaktlägen per omkopplare ger ofarliga tillstånd, oavsett kontaktbild. Vi ändrar ändå bara lägen med förstärkaren avstängd, som du föreslog.
+- **Minimumfas.** Oron är befogad i princip, men känslighetsanalysen visar att resultatet håller för rimliga förskjutningar och normala toleranser (spridning cirka ±1,5 dB).
+
+**Fel jag själv hittade i rev A:**
+
+1. **L1:s resistans var felmodellerad.** Verkligt minimum är cirka 3,34 Ω, inte 3,64 Ω.
+2. **En kortsluten C3 lägger cirka 0,3 Ω direkt över förstärkaren.** Det är en risk som finns i alla filter av den här typen (C–L–C). Åtgärden är en polypropenkondensator, som är självläkande, plus en polyfuse före C3. Det ändrar min tidigare hållning att ingen säkring behövs.
+3. **Toppen vid 12,5 kHz var okorrigerad,** och S3 + höjde den till +5,5 dB. Det är raka motsatsen till "luft utan vasshet". B&O sänker själva den toppen med 4,8 dB.
+
+**Uppdaterad rekommendation:** grundarkitekturen behålls, men reglagen och diskantgrenen ändras:
+
+- S1 bas/vägg får större omfång och kan förenklas till två lägen.
+- S2 närvaro verkar vid 3–5 kHz.
+- S3 ger en jämn diskantnivå från 3 kHz.
+- En fast notch vid cirka 13 kHz och en polyfuse tillkommer.
+- Strategin blir en **hybrid**: basgrenarna tas från originalet om en simulering av det visar att de är bra, annars används rev B:s.
+
+**Nästa steg:**
+
+1. **Du:** fotografera originalkortet och mät elementens likströmsresistans.
+2. **Du:** mät med linjal hur djupt kalott och dammkåpa sitter.
+3. **Jag:** ritar av och simulerar originalet.
+4. **Du, med min instruktion:** gör en impedansmätning. Den är nu obligatorisk före beställning.
+
+Detaljerna och underlaget för varje punkt följer nedan.
+
+---
+
 ## Punkt 2 – Klassificeringen av originalfiltret
+
+> **Granskarens invändning:** Två spolar räcker inte för att utesluta 2,5-väg. Hi-Fi News beskriver olika arbetsområden för RL60.2:s baselement. Ompröva klassificeringen och överväg ett rekonstruerat original som konstruktionsbas.
 
 **Bedömning: håller med.** Min slutsats "troligen tvåvägare" var för svagt underbyggd och dras tillbaka.
 
@@ -38,6 +86,8 @@ Rådata: `data/beocreate_rl6000_curves.json`. Källan är B&O:s egna PDF-filer i
 - **Åtgärd rev B:** rita av originalkortet från foton, simulera originalet i samma modell med B&O-data och jämför. **Det här är det enskilt mest värdefulla analyssteget.** Det ger oss ett mått på hur stor förbättringspotentialen är, utan akustisk mätning.
 
 ## Punkt 3 – Impedans och förstärkarbelastning
+
+> **Granskarens invändning:** 3,64 Ω bygger på antagna modeller och ger liten marginal mot SU-V505. Beloppet räcker inte, fasen spelar också roll. Toleranser saknas. Re räcker inte för alla beslut.
 
 **Bedömning: håller delvis med.** Granskaren har rätt i att jag bara redovisade |Z|. Jag hittade dessutom ett eget fel som gör rev A sämre än rapporterat.
 
@@ -77,6 +127,8 @@ Rådata: `data/beocreate_rl6000_curves.json`. Källan är B&O:s egna PDF-filer i
 
 ## Punkt 4 – Simuleringsmodellens tillförlitlighet
 
+> **Granskarens invändning:** Minimumfas och nollfördröjning är antaganden som kan påverka summan kring delningen. Gör en känslighetsanalys och bevara data och filer så att resultaten går att reproducera.
+
 **Bedömning: håller delvis med.**
 
 - **Minimumfas:** rimligt för konelement och kalotter i deras arbetsområde. Det är standardpraxis, och VituixCAD och XSim gör likadant när fasdata saknas. Approximationen blir sämre vid brytningar, till exempel basens topp vid 12,6 kHz, men där spelar basen inte. **Verklig fas finns inte i B&O-datat:** SigmaStudio-projektet (`.dspproj`) innehåller bara DSP-block och inga mätningar.
@@ -102,6 +154,8 @@ Rådata: `data/beocreate_rl6000_curves.json`. Källan är B&O:s egna PDF-filer i
 
 ## Punkt 5 – Närvarokontrollen
 
+> **Granskarens invändning:** S2 verkar vid 0,7–2 kHz. Området 2–5 kHz, som är viktigast för närvaro och artikulation, saknar en egen kontroll.
+
 **Bedömning: håller med.** Det här är granskningens viktigaste punkt för dina mål. Rev A:s S2 verkade vid 0,7–2 kHz, och 3–5 kHz saknade en egen kontroll.
 
 Jag har testat tre lösningar:
@@ -117,6 +171,8 @@ Jag har testat tre lösningar:
 - **Ärlig reservation:** i rev B:s neutralläge ligger 2,5–4 kHz cirka 2,5 dB under nivån vid 1 kHz. B&O:s DSP-resultat ligger cirka 1 dB under. "Fram" ligger alltså närmast B&O:s mål. Om du konsekvent föredrar Fram centrerar vi om efter lyssning.
 
 ## Punkt 6 – Varför cirka 450 Hz för nedre basen?
+
+> **Granskarens invändning:** B&O:s DSP delar vid 801 Hz, rev A vid cirka 450 Hz. Motivering och jämförelse av alternativ saknas.
 
 **Bedömning: håller delvis med.** Motiveringen saknades i rapporten.
 
@@ -138,6 +194,8 @@ Jag har testat tre lösningar:
   - Väggmodellen är ett antagande: +5 dB under cirka 250 Hz, eftersom baffle step försvinner vid montering tätt mot vägg.
 
 ## Punkt 7 – Omkopplingssäkerhet och komponentbelastning
+
+> **Granskarens invändning:** Påståendena om felsäkerhet och om omkoppling under spel behöver kontrolleras mot verkliga omkopplare och kontaktförlopp. Effekten i motstånden ska beräknas. Är diskantens L-pad verkligen impedansstabilt?
 
 **Bedömning: håller delvis med.**
 
@@ -176,6 +234,8 @@ Sinusvärdena i rapporten (upp till 68 W) gällde full effekt med sinus över 1 
 
 ## Punkt 8 – Antal reglage
 
+> **Granskarens invändning:** Är tre reglage rätt antal? Hellre två välfungerande än tre som överlappar, men närvarokontrollen får inte tas bort.
+
 **Bedömning: tre reglage behålls, med nya roller.**
 
 | Rev B | Band | Verkan (beräknad) |
@@ -188,6 +248,8 @@ Sinusvärdena i rapporten (upp till 68 W) gällde full effekt med sinus över 1 
 - **Billigare S1:** eftersom dina högtalare sitter på vägg räcker en tvålägesomkopplare (SPDT ON-ON: Vägg/Neutral). Vill du spara mer kan den ersättas av en bygel.
 
 ## Punkt 9 – Kostnad
+
+> **Granskarens invändning:** Kan konstruktionen förenklas utan att det som gör projektet intressant går förlorat?
 
 **Bedömning: håller med om inriktningen.** Rev B är ungefär lika komplex som rev A:
 
@@ -204,6 +266,8 @@ Uppskattning cirka 1 300–1 900 kr för paret. Det är **ej verifierat**, och e
 
 ## Punkt 10 – Strategi
 
+> **Granskarens invändning:** Jämför ett vidareutvecklat original (A), rev A (B) och ett eget alternativ (C).
+
 | | A. Rekonstruerat original + justeringar | B. Rev A (helt ny 2,5-väg) | **C. Hybrid (rekommenderas)** |
 |---|---|---|---|
 | Basgrenar | Originalets | Nya | **Originalets topologi och värden** om de visar sig rimliga, annars rev B:s |
@@ -218,6 +282,8 @@ Uppskattning cirka 1 300–1 900 kr för paret. Det är **ej verifierat**, och e
 - Att behålla dem minskar både risk och antal nya komponenter. Om simuleringen av originalet visar svagheter i basgrenarna byter vi dem mot rev B:s.
 
 ## Punkt 11 – Vad kräver vilken mätning?
+
+> **Granskarens invändning:** Vad går att konstruera med befintliga data, och vad kräver Re-mätning, impedansmätning eller akustisk mätning?
 
 | Nivå | Vad vi kan göra | Vad den eliminerar | Värde för första prototypen |
 |---|---|---|---|
@@ -285,3 +351,29 @@ Rev B-kandidatens värden finns i `sim/revB_candidate.py` och verkan i `plots/07
 | 8 | Bygga, köra de elektriska kontrollerna (rapportens avsnitt G, kompletterat med C3- och L3-kontroll), lyssna | Du | – |
 
 Det jag kan göra direkt utan mer information är redan gjort: analyserna och rev B-kandidaten ovan. Allt annat väntar på punkterna 1, 2 och 4.
+
+---
+
+## Bilaga – Diskussion om projektets värde (från samtalet)
+
+Här är det vi diskuterade om projektets värde, med mina rättelser.
+
+**Är det värt att göra?** Ja, som det experiment projektet är tänkt som. Det jag ville undvika var att lova en dramatisk förbättring som jag inte kan belägga. "Måttlig" handlade om säkerheten i prognosen, inte om att originalet skulle vara felfritt. Det finns troliga kompromisser i originalet:
+
+- elektrolytkondensatorer och få komponenter, typiskt för prisklassen på 90-talet
+- en låst basbalans som inte kan anpassas till väggmontering
+- B&O:s egen DSP-lösning från 2018, som innehåller mer än ett enkelt passivt filter kan ha gjort.
+
+Elementen sätter samtidigt ett tak. Diskantens dipp vid 6,5 kHz och topp vid 12,5 kHz finns kvar oavsett filter.
+
+**Rättelse om interferens mellan baselementen.** I samtalet lyfte jag interferens mellan två baselement som spelar upp mot 2–3 kHz som en trolig kompromiss i originalet. Efter granskningen (punkt 2) gäller det sannolikt inte, eftersom originalet troligen redan är en 2,5-vägare.
+
+**Kan de låta som högtalare för 15 000 kr?** Nej. Ett filter kan förbättra tonbalans, övergång och väggbalans. Det kan inte ändra diskantens elementfel, spridningen, distorsionen, lådans resonanser eller djupbasen. Realistisk förväntan: den bästa versionen av en RL6000, inte en annan klass av högtalare.
+
+**Rättelse om prisspannet.** Jämförelsen med 15 000–25 000 kr var missvisande. Bra nya högtalare finns från ungefär 3 000–8 000 kr (ungefärligt, ej kontrollerat per modell). Mot den nivån är frågan öppen:
+
+- RL6000 kan vinna på fyllig bas, två baselement och en låda för väggmontering.
+- En modern högtalare vinner sannolikt på diskant, spridning och distorsion.
+- Ekonomiskt är MkII (cirka 1 300–2 200 kr plus tid) inte självklart billigare än ett par nya högtalare i det lägre spannet.
+
+MkII bör därför ses som ett projekt man gör för att det är intressant och lärorikt, inte för att spara pengar. Den renoverade originalversionen kan jämföras gratis med nya högtalare vid en provlyssning.
