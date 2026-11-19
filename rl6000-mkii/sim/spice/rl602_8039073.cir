@@ -1,0 +1,21 @@
+* RL60.2 filter 8039073 (verifierat schema) – genererad av originals.py. Noder: in, 0 (jord). Element som Re+Le (förenklat).
+Vin in 0 AC 2.83
+L1 in n1 0.0068 Rser=0.60
+C1 n1 n1a 2.2e-05
+R6 n1a 0 6.8
+RW1 n1 n1w 7.2
+LW1 n1w 0 0.0005
+L2 in n2 0.001 Rser=0.65
+C2 n2 0 6.8e-06
+L3 n2 n3 0.00033 Rser=0.38
+R2 n3 n3a 15.0
+C3 n3a 0 1e-05
+RW2 n3 n3w 7.2
+LW2 n3w 0 0.0005
+C4 in n4 4.7e-06
+L4 n4 0 0.00033 Rser=0.38
+C5 n4 n5 1.5e-05
+RT n5 n5t 4.6
+LT n5t 0 5e-05
+.ac dec 100 20 20k
+.end
