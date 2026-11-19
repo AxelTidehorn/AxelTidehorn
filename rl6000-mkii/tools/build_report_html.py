@@ -12,8 +12,11 @@ REVIEW_FIGS={'## Punkt 5':('05_delay_sensitivity.png','Figur R1. Känslighet fö
  '## Punkt 7':('06_w1_crossover_sweep.png','Figur R2. Svep av nedre basens delning, fritt fält och väggmodell (BERÄKNAD).'),
  '## Punkt 9':('07_revB_switches.png','Figur R3. Rev B-kandidat: verkan av S1–S3 (BERÄKNAD, antagen impedans).'),
  '## Punkt 10':('08_revB_impedance_all.png','Figur R4. Rev B-kandidat: inimpedans i alla 27 lägen (antagen impedans).')}
-if SRC!='README.md':
-    for h,(n,c) in REVIEW_FIGS.items(): md=md.replace(h, fig(n,c)+'\n'+h,1)
+SOUND_FIGS={'## 3. Svar på dina sex frågor':[('09_lobing.png','Figur L1. Lobing W2–diskant, rev B, d = 0,15 m antaget (BERÄKNAD).'),
+   ('10_directivity.png','Figur L2. Spridning, kolvmodell (BERÄKNAD, vinklade fronter ej modellerade).'),
+   ('11_pair_matching.png','Figur L3. Nivåskillnad vänster/höger från komponenttoleranser (BERÄKNAD).')]}
+FIGS={'granskning_revA.md':{h:[x] for h,x in REVIEW_FIGS.items()}, 'ljudmal_revB.md':SOUND_FIGS}.get(SRC,{})
+for h,lst in FIGS.items(): md=md.replace(h, ''.join(fig(n,c) for n,c in lst)+'\n'+h,1)
 md=md.replace('### D6.', fig('01_neutral.png','Figur 1. MkII neutralläge – grenar, summa och impedans (BERÄKNAD; elementdata B&O, impedans antagen). Orange streckad: B&O BeoCreate DSP-resultat.')+fig('02_switches.png','Figur 2. Verkan av respektive omkopplare, övriga i neutralläge (BERÄKNAD).')+fig('03_impedance_all.png','Figur 3. Inimpedans i alla 27 lägeskombinationer (antagen elementimpedans). Röd linje 3,5 Ω.')+'\n### D6.',1)
 body=markdown.markdown(md,extensions=['tables','fenced_code','sane_lists']).replace('src="plots/','src="file://'+str(P)+'/').replace('<p><img','<p style="text-align:center"><img style="width:100%"')
 css='''@page{size:A4;margin:16mm 15mm 16mm 15mm}

@@ -27,6 +27,9 @@ B = dict(
     Rs=(0.68, 1.5, 2.7), Rsh=(OPEN, 33.0, 15.0),                 # S3: + / 0 / −  (konstant-Z L-pad)
     Ln=0.47e-3, Cn=4.7e-6, Rn=(OPEN, 10.0, 3.3),                 # S2: Fram / Neutral / Mjuk
 )
+# B2: B optimerad för fasföljd W2–diskant (RL60.2-elementdata, se imaging_analysis.py avsnitt 6).
+# Delning ~2,1 kHz, stabil i alla S2-lägen. Pris: Zmin ~3,2 Ω (vid ~6 kHz), diskanten närmare sin fs (1,5 kHz).
+B2 = dict(B, L2=1.8e-3, C2=8.2e-6, R_C2=0.22, C3=5.6e-6, L3=0.18e-3, C4=12e-6, Ln=0.82e-3, Cn=1.5e-6, Rs=(1.0, 2.2, 3.9))
 S1B = {'Fri': 0, 'Neutral': 1, 'Vägg': 2}
 S2B = {'Fram': 0, 'Neutral': 1, 'Mjuk': 2}
 S3B = {'+': 0, '0': 1, '−': 2}
