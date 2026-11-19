@@ -2,6 +2,8 @@
 
 **Förstudie och första konstruktionsförslag · rev A · 2026-11-19**
 
+> **Uppdatering:** rev A har granskats, se [`granskning_revA.md`](granskning_revA.md). Flera slutsatser nedan är reviderade: originalets topologi, närvarokontrollen, diskantnivån, Zmin och diskantskyddet. Rev B-kandidat: `sim/revB_candidate.py`.
+
 Status: preliminär konstruktion. Komponentvärdena är **beräknade**, inte verifierade. De får inte byggas in förrän elementens impedans är uppmätt (se avsnitt I).
 
 | Symbol | Betydelse |
