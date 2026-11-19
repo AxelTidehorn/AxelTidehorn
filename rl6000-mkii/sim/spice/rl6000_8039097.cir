@@ -1,0 +1,22 @@
+* RL6000 filter 8039097 – genererad av originals.py. Element som Re+Le (förenklat, RL60.2-elementdata).
+Vin in 0 AC 2.83
+L1 in n1 0.0068 Rser=0.60
+C1 n1 n1a 2.2e-05
+R4 n1a 0 15.0
+RW1 n1 n1w 7.2
+LW1 n1w 0 0.0005
+L2 in n2a 0.00068 Rser=0.52
+C5 n2a n2 5.6e-06
+C2 n2 n2b 1.5e-05
+R3 n2b 0 15.0
+RW2 n2 n2w 7.2
+LW2 n2w 0 0.0005
+C3 in n3 5.6e-06
+L4 n3 0 0.00033 Rser=0.38
+R2 n3 n4 3.9
+C4 n3 n4 3.3e-06
+R1 n4 0 10.0
+RT n4 n4t 4.6
+LT n4t 0 5e-05
+.ac dec 100 20 20k
+.end
