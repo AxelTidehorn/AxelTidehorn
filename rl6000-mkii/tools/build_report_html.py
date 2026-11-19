@@ -1,10 +1,19 @@
-import markdown, pathlib
-R=pathlib.Path('/home/user/AxelTidehorn/rl6000-mkii')
-md=(R/'README.md').read_text()
+# Användning: python3 tools/build_report_html.py [README.md | granskning_revA.md]  -> _report.html
+import markdown, pathlib, sys
+R=pathlib.Path(__file__).resolve().parent.parent
+SRC=sys.argv[1] if len(sys.argv)>1 else 'README.md'
+md=(R/SRC).read_text()
 import re
-md=re.sub(r'(?m)^(?!\s*(?:- |\d+\. |\|))(.+)\n(?=- |\d+\. )', r'\1\n\n', md)
+md=re.sub(r'(?m)^  (?=\S)', '    ', md)  # python-markdown kräver 4 blanksteg för nästling
+md=re.sub(r'(?m)^(?!\s*(?:- |\d+\. |\|))(.+)\n(?=\s*(?:- |\d+\. ))', r'\1\n\n', md)
 P=R/'plots'
 fig=lambda n,c: f'\n<figure><img src="file://{P/n}"><figcaption>{c}</figcaption></figure>\n'
+REVIEW_FIGS={'## Punkt 5':('05_delay_sensitivity.png','Figur R1. Känslighet för diskantens tidsförskjutning, rev A (BERÄKNAD).'),
+ '## Punkt 7':('06_w1_crossover_sweep.png','Figur R2. Svep av nedre basens delning, fritt fält och väggmodell (BERÄKNAD).'),
+ '## Punkt 9':('07_revB_switches.png','Figur R3. Rev B-kandidat: verkan av S1–S3 (BERÄKNAD, antagen impedans).'),
+ '## Punkt 10':('08_revB_impedance_all.png','Figur R4. Rev B-kandidat: inimpedans i alla 27 lägen (antagen impedans).')}
+if SRC!='README.md':
+    for h,(n,c) in REVIEW_FIGS.items(): md=md.replace(h, fig(n,c)+'\n'+h,1)
 md=md.replace('### D6.', fig('01_neutral.png','Figur 1. MkII neutralläge – grenar, summa och impedans (BERÄKNAD; elementdata B&O, impedans antagen). Orange streckad: B&O BeoCreate DSP-resultat.')+fig('02_switches.png','Figur 2. Verkan av respektive omkopplare, övriga i neutralläge (BERÄKNAD).')+fig('03_impedance_all.png','Figur 3. Inimpedans i alla 27 lägeskombinationer (antagen elementimpedans). Röd linje 3,5 Ω.')+'\n### D6.',1)
 body=markdown.markdown(md,extensions=['tables','fenced_code','sane_lists']).replace('src="plots/','src="file://'+str(P)+'/').replace('<p><img','<p style="text-align:center"><img style="width:100%"')
 css='''@page{size:A4;margin:16mm 15mm 16mm 15mm}

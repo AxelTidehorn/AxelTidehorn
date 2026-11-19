@@ -403,4 +403,6 @@ Slutsats: **diskantens data påverkar i praktiken bara nivån, som L-padet hante
 - Soundimports (priser för spolar): <https://www.soundimports.eu/en/it-intertechnik-hqr32-082-71.html>
 
 ### Bygga om PDF:en
-`python3 tools/build_report_html.py && node tools/html_to_pdf.js` (kräver python-markdown och Playwright/Chromium). Ta bort `_report.html` efteråt.
+Kräver python-markdown och Playwright/Chromium. Ta bort `_report.html` efteråt.
+- Förstudien: `python3 tools/build_report_html.py && node tools/html_to_pdf.js`
+- Granskningssvaret: `python3 tools/build_report_html.py granskning_revA.md && node tools/html_to_pdf.js RL6000_MkII_granskning_revA.pdf "RL6000 MkII – svar på granskning av rev A"`

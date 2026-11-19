@@ -155,7 +155,7 @@ Jag har testat tre lösningar:
 | Rs-kedjan | 0,38 W | 1,9 W | **10 W** |
 | Rp | 0,07 W | 0,35 W | 5 W |
 
-  Sinusvärdena i rapporten (upp till 68 W) gällde full effekt med sinus över 1 kHz. Det är ett orealistiskt fall där diskanten själv skulle gå sönder först. 10 W-motstånd ger mer än 5 gångers marginal vid musik.
+Sinusvärdena i rapporten (upp till 68 W) gällde full effekt med sinus över 1 kHz. Det är ett orealistiskt fall där diskanten själv skulle gå sönder först. 10 W-motstånd ger mer än 5 gångers marginal vid musik.
 - **Felmoder i diskantgrenen** (avsnitt 6, elektrisk dämpning till diskanten):
 
 | Fel | 500 Hz | 1 kHz | Zmin | Bedömning |
@@ -167,11 +167,12 @@ Jag har testat tre lösningar:
 | Rp avbrott | −46 | −30 | 4,09 | Ofarligt |
 | Rp kortsluten | – | – | 4,09 | Diskanten tyst, ofarligt |
 
-  **Åtgärd:**
-  - C3 ska vara en metalliserad polypropenkondensator (MKP). Den är självläkande och felar normalt genom att tappa kapacitans, inte genom kortslutning.
-  - **En polyfuse (PTC) läggs in före C3.** Den skyddar förstärkaren vid genomslag i C3 och diskanten vid extrem överbelastning. Kall resistans cirka 0,1–0,2 Ω ingår i modellen. Detta reviderar min tidigare hållning "ingen säkring", eftersom komponenten nu har en verifierbar funktion.
-  - L3 kontrolleras med kontinuitetstest vid bygget.
-- **Diskantnivån:** **granskaren har rätt.** Rev A:s S3 ändrar högpassets överföring: +1,7 dB vid 2,5 kHz, +0,6 vid 4 kHz och +1,5…1,9 vid 10–16 kHz. Det är ingen ren nivåkontroll. Rev B använder ett **L-pad med konstant impedans**: serie- och shuntmotstånd byts parvis med en DPDT, och ger en jämn ändring på cirka 0,8…1,6 dB från 3 kHz.
+**Åtgärd:**
+- C3 ska vara en metalliserad polypropenkondensator (MKP). Den är självläkande och felar normalt genom att tappa kapacitans, inte genom kortslutning.
+- **En polyfuse (PTC) läggs in före C3.** Den skyddar förstärkaren vid genomslag i C3 och diskanten vid extrem överbelastning. Kall resistans cirka 0,1–0,2 Ω ingår i modellen. Detta reviderar min tidigare hållning "ingen säkring", eftersom komponenten nu har en verifierbar funktion.
+- L3 kontrolleras med kontinuitetstest vid bygget.
+
+**Diskantnivån: granskaren har rätt.** Rev A:s S3 ändrar högpassets överföring: +1,7 dB vid 2,5 kHz, +0,6 vid 4 kHz och +1,5…1,9 vid 10–16 kHz. Det är ingen ren nivåkontroll. Rev B använder ett **L-pad med konstant impedans**: serie- och shuntmotstånd byts parvis med en DPDT, och ger en jämn ändring på cirka 0,8…1,6 dB från 3 kHz.
 
 ## Punkt 8 – Antal reglage
 
