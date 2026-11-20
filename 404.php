@@ -1,1 +1,0 @@
-<h2>no posts found</h2>
